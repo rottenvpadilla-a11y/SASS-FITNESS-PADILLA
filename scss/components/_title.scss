@@ -1,0 +1,11 @@
+@use "../abstract/" as *;
+
+.title {
+    max-width: 40rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2rem;
+    h2{
+        margin-bottom: .5rem;
+    }
+}

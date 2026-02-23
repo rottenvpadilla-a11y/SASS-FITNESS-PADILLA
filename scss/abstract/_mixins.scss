@@ -1,0 +1,43 @@
+@mixin centerAll {
+    display :flex;
+    justify-content:center ;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin between {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+@mixin gridFixed($cols,$gap){
+    display: grid;
+    grid-template-columns: repeat($cols, 1fr);
+    gap: $gap;;
+}
+
+@mixin gridCustom($columns,$gap){
+    display: grid;
+    grid-template-columns: $columns;
+    gap: $gap;
+}
+
+@mixin bgSize{
+    background-size:cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin imgFit($width: 300px, $height: 300px){
+    width: $width;
+    height: $height;
+    object-fit: cover;
+    object-position: center;
+}
+
+@mixin mediaQuery($max-width){
+    @media screen and (max-width: $max-width){
+        @content;
+    }
+}
