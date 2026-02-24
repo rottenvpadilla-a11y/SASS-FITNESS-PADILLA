@@ -1,0 +1,16 @@
+@use "../abstract/" as*;
+
+.footer{
+    padding: 2rem 0;
+    color: $clr--light;;
+    &__wrapper {
+        @include between;
+    }
+    &__social{
+        display: flex;
+        gap: 2rem;
+        li a{
+            color: $clr--light;
+        }
+    }
+}

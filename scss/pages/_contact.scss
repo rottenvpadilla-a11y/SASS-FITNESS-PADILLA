@@ -1,0 +1,93 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.contactBanner {
+  padding: 4rem 0;
+  position: relative;
+  &__title {
+    max-width: 50rem;
+    margin-bottom: 2rem;
+  }
+  &__wrapper {
+    @include gridCustom(1.5fr 1fr, 5rem);
+  }
+  &__left {
+    form {
+      display: flex;
+      flex-direction: column;
+      input {
+        margin: 0.5rem 0 2rem;
+        width: 100%;
+        padding: 1rem;
+        background-color: $clr--dark;
+      }
+      textarea {
+        @extend input;
+        height: 10rem;
+      }
+      input::placeholder {
+        font-family: $font-primary;
+        color: $clr--light;
+      }
+      input:focus,
+      input:enable {
+        color: $clr--light;
+      }
+    }
+    &--name {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+    }
+  }
+  &__right {
+    padding: 4rem;
+    background-color: $clr--light;
+    border: 1px solid $clr--dark;
+    height: fit-content;
+    width: fit-content;
+    &::after {
+      position: absolute;
+      display: inline-block;
+      content: " ";
+      background-color: $clr--dark;
+      width: 38rem;
+      height: 90vh;
+      right: 1rem;
+      bottom: 1rem;
+      z-index: -9;
+    }
+  }
+}
+
+.contactFaq {
+  padding: 4rem 0;
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+  }
+  &__left {
+    max-width: 30rem;
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
+  &__item {
+    border-bottom: 1px solid $clr--gray;
+    padding: 1.5rem 0;
+    &--question {
+      @include between;
+      cursor: pointer;
+      i {
+        transition: 0.5s ease;
+      }
+    }
+    &--answer {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: 0.5s ease;
+    }
+  }
+}
