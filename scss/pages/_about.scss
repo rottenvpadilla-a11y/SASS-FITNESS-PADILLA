@@ -5,8 +5,19 @@
   &__top {
     @include between;
     margin-bottom: 1rem;
+    h1 {
+      line-height: 5rem;
+      margin-top: 2rem;
+    }
     &--right {
       width: 80rem;
+      @include mediaQuery(520px) {
+        width: unset;
+      }
+    }
+    @include mediaQuery(520px) {
+      flex-direction: column;
+      text-align: center;
     }
   }
 
@@ -34,6 +45,11 @@
       "a c"
       "b c";
     gap: 1rem;
+
+    @include mediaQuery(520px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
@@ -49,10 +65,11 @@
     h2 {
       max-width: 40rem;
     }
+    @include mediaQuery(520px) {
+      margin-bottom: 2rem;
+    }
   }
   .cardIcon {
-
-   
     @include centerAll;
     gap: 1.2rem;
     background-color: $clr--light;
@@ -67,6 +84,13 @@
 
   &__cards {
     @include gridFixed(2, 1rem);
+    @include mediaQuery(520px) {
+      grid-template-columns: unset;
+    }
+  }
+
+  @include mediaQuery(520px) {
+    padding: 4rem 0;
   }
 }
 

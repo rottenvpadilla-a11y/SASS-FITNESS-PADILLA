@@ -1709,8 +1709,23 @@ img {
   align-items: center;
   margin-bottom: 1rem;
 }
+.aboutBanner__top h1 {
+  line-height: 5rem;
+  margin-top: 2rem;
+}
 .aboutBanner__top--right {
   width: 80rem;
+}
+@media screen and (max-width: 520px) {
+  .aboutBanner__top--right {
+    width: unset;
+  }
+}
+@media screen and (max-width: 520px) {
+  .aboutBanner__top {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 .aboutBanner__bottom--a {
   grid-area: a;
@@ -1745,6 +1760,12 @@ img {
   grid-template-areas: "a c" "b c";
   gap: 1rem;
 }
+@media screen and (max-width: 520px) {
+  .aboutBanner__bottom {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .aboutCore {
   padding: 4rem 20rem;
@@ -1761,6 +1782,11 @@ img {
 }
 .aboutCore__title h2 {
   max-width: 40rem;
+}
+@media screen and (max-width: 520px) {
+  .aboutCore__title {
+    margin-bottom: 2rem;
+  }
 }
 .aboutCore .cardIcon {
   display: flex;
@@ -1781,6 +1807,16 @@ img {
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
+@media screen and (max-width: 520px) {
+  .aboutCore__cards {
+    grid-template-columns: unset;
+  }
+}
+@media screen and (max-width: 520px) {
+  .aboutCore {
+    padding: 4rem 0;
+  }
+}
 
 .aboutLocation {
   padding: 4rem 0;
@@ -1800,10 +1836,26 @@ img {
   max-width: 50rem;
   margin-bottom: 2rem;
 }
+@media screen and (max-width: 520px) {
+  .contactBanner__title {
+    align-items: center;
+    margin-top: 3rem;
+  }
+  .contactBanner__title h1,
+  .contactBanner__title p {
+    text-align: center;
+  }
+}
 .contactBanner__wrapper {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: 5rem;
+}
+@media screen and (max-width: 520px) {
+  .contactBanner__wrapper {
+    grid-template-columns: unset;
+    justify-content: center;
+  }
 }
 .contactBanner__left form {
   display: flex;
@@ -1856,6 +1908,11 @@ img {
   bottom: 1rem;
   z-index: -9;
 }
+@media screen and (max-width: 520px) {
+  .contactBanner__right::after {
+    width: 0;
+  }
+}
 
 .contactFaq {
   padding: 4rem 0;
@@ -1865,12 +1922,22 @@ img {
   flex-direction: row;
   gap: 5rem;
 }
+@media screen and (max-width: 520px) {
+  .contactFaq__wrapper {
+    flex-direction: column;
+  }
+}
 .contactFaq__left {
   max-width: 30rem;
   margin-bottom: 2rem;
 }
 .contactFaq__left h2 {
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 520px) {
+  .contactFaq__left {
+    text-align: center;
+  }
 }
 .contactFaq__item {
   border-bottom: 1px solid #ddd;
