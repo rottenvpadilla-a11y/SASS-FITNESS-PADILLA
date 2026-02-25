@@ -30,10 +30,11 @@
         color: $clr--light;
       }
       input:focus,
-      input:enable {
+      input:enabled {
         color: $clr--light;
       }
     }
+
     &--name {
       display: flex;
       flex-direction: row;
@@ -51,7 +52,7 @@
       display: inline-block;
       content: " ";
       background-color: $clr--dark;
-      width: 38rem;
+      width: 40rem;
       height: 90vh;
       right: 1rem;
       bottom: 1rem;
@@ -69,6 +70,7 @@
   }
   &__left {
     max-width: 30rem;
+    margin-bottom: 2rem;
     h2 {
       margin-bottom: 2rem;
     }
@@ -83,11 +85,20 @@
         transition: 0.5s ease;
       }
     }
+    &.active {
+      i {
+        transform: rotate(180deg);
+      }
+      .contactFaq__item--answer {
+        max-height: 1000px;
+      }
+    }
+
     &--answer {
       max-height: 0;
       overflow: hidden;
-      opacity: 0;
       transition: 0.5s ease;
+      margin-top: 1rem;
     }
   }
 }
